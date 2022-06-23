@@ -1,0 +1,63 @@
+package com.example.primeiraatividade;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.example.primeiraatividade.R;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText num1,num2;
+    TextView resultado;
+    int n1, n2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        num1 = findViewById(R.id.Numum);
+        num2 = findViewById(R.id.Numdois);
+        resultado = findViewById(R.id.result);
+    }
+
+    public void Adicao(View view){
+        n1 = Integer.parseInt(num1.getText().toString());
+        n2 = Integer.parseInt(num2.getText().toString());
+
+        int result = n1 + n2;
+
+        resultado.setText(Integer.valueOf(result).toString());
+    }
+
+    public void Subtracao(View view){
+        n1 = Integer.parseInt(num1.getText().toString());
+        n2 = Integer.parseInt(num2.getText().toString());
+
+        int result = n1 - n2;
+
+        resultado.setText(Integer.valueOf(result).toString());
+    }
+
+    public void Multiplicacao(View view){
+        n1 = Integer.parseInt(num1.getText().toString());
+        n2 = Integer.parseInt(num2.getText().toString());
+
+        int result = n1 * n2;
+
+        resultado.setText(Integer.valueOf(result).toString());
+    }
+
+    public void Divisao(View view){
+        n1 = Integer.parseInt(num1.getText().toString());
+        n2 = Integer.parseInt(num2.getText().toString());
+
+        int result = n1 / n2;
+
+        resultado.setText(Integer.valueOf(result).toString());
+    }
+}
