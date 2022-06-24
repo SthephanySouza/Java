@@ -1,34 +1,52 @@
+Main
+
 package com.example.atividade2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText num1,num2;
-    TextView result;
-    int n1, n2;
-
+    EditText peso,altura;
+    TextView IMC;
+    RadioButton homem, mulher;
 }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        num1 = findViewById(R.id.Num1);
-        num2 = findViewById(R.id.Num2);
-        result = findViewById(R.id.result);
+        peso = findViewById(R.id.Num1);
+        altura = findViewById(R.id.Num2);
+        IMC = findViewById(R.id.result);
+        homem = findViewById(R.id.rdbhomem);
+        mulher = findViewById(R.id.rdbmulher);
     }
 
         public void Calcula(View view){
-            n1 = Integer.parseInt(num1.getText().toString());
-            n2 = Integer.parseInt(num2.getText().toString());
+           int n1 = Integer.parseInt(peso.getText().toString());
+           int n2 = Integer.parseInt(altura.getText().toString());
 
-            int IMC = n1 + n2;
+           int result = n1/(n2*n2);
 
-            result.setText(Integer.valueOf(IMC).toString());
+            if(){
+
+            }
         }
 }
+
+String
+
+<resources>
+    <string name="app_name">Atividade2</string>
+
+    <string name="peso">Digite seu peso: </string>
+    <string name="altura">Digite sua altura: </string>
+    <string name="IMC">Calcular</string>
+    <string name="homem">Homem</string>
+    <string name="mulher">Mulher</string>
+</resources>
